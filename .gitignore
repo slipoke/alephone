@@ -21,6 +21,7 @@ lib*.a
 /config.status
 /config.sub
 /configure
+/configure~
 /depcomp
 /install-sh
 /missing

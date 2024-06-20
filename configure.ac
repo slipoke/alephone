@@ -75,14 +75,15 @@ dnl Check for boost functions and libraries.
 AX_BOOST_BASE([1.65.0],
               ,
               [AC_MSG_ERROR([You need Boost 1.65.0 or higher to build Aleph One.])])
-AX_BOOST_SYSTEM
-AS_IF([ test "x$BOOST_SYSTEM_LIB" != "x" ],
-      [ LIBS="$BOOST_SYSTEM_LIB $LIBS" ],
-      [AC_MSG_ERROR([You need the Boost::System library to run Aleph One.])])
-AX_BOOST_FILESYSTEM
-AS_IF([ test "x$BOOST_FILESYSTEM_LIB" != "x" ],
-      [ LIBS="$BOOST_FILESYSTEM_LIB $LIBS" ],
-      [AC_MSG_ERROR([You need the Boost::Filesystem library to run Aleph One.])])
+dnl This stuff does not work on the Vita
+dnl AX_BOOST_SYSTEM
+dnl AS_IF([ test "x$BOOST_SYSTEM_LIB" != "x" ],
+dnl       [ LIBS="$BOOST_SYSTEM_LIB $LIBS" ],
+dnl       [AC_MSG_ERROR([You need the Boost::System library to run Aleph One.])])
+dnl AX_BOOST_FILESYSTEM
+dnl AS_IF([ test "x$BOOST_FILESYSTEM_LIB" != "x" ],
+dnl       [ LIBS="$BOOST_FILESYSTEM_LIB $LIBS" ],
+dnl       [AC_MSG_ERROR([You need the Boost::Filesystem library to run Aleph One.])])
       
 AC_DEFUN([AX_CHECK_BOOST_HEADER],
          [ AC_LANG_PUSH(C++)
